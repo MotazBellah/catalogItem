@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Catalog</title>
+    </head>
+    <body>
+        <h2>Catalog</h2>
+        <ul>
+            {% for i in catalogs %}
+            <li><a href= "{{url_for('showItem', catalog_name = i.name)}}">{{i.name}}</a></li>
+            {% endfor %}
+        </ul>
+
+    </body>
+</html>
